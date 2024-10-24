@@ -1,16 +1,40 @@
 {
   "name": "edunomice-server-fastify",
+  "description": "A high-performance, educational API server built with Fastify, TypeScript, and Prisma",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
+    "start": "node dist/server.js",
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "tsc",
-    "start": "node dist/server.js"
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:studio": "prisma studio",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "Codewithashim",
+  "keywords": [
+    "fastify",
+    "typescript",
+    "prisma",
+    "api",
+    "education",
+    "server",
+    "rest",
+    "swagger"
+  ],
+  "author": "Codewithashim <codewithashim@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codewithashim/Edunomice-Server-Fastify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codewithashim/Edunomice-Server-Fastify/issues"
+  },
+  "homepage": "https://github.com/codewithashim/Edunomice-Server-Fastify#readme",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "dependencies": {
     "@fastify/swagger": "^8.15.0",
     "@fastify/swagger-ui": "^4.1.0",
